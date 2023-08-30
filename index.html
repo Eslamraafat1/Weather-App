@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Weather App for 3 Days">
+    <title>Landing Weather API</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- start header -->
+    <div class="site-header">
+        <div class="container">
+            <div class="header-nav">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="logo img" class="logo-img">
+                    <div class="logo-text">
+                        <h1 class="logo-title">Weather</h1>
+                        <small class="logo-desc">tagline goes here</small>
+                    </div>
+                </a>
+
+                <div class="main-navigation">
+                    <ul class="menu" id="menu-toggle">
+                        <i class="fa fa-times" onclick="hideMenu()"></i>
+
+                        <li class="menu-item active"><a href="index.html">Home</a></li>
+                        <li class="menu-item"><a href="#">News</a></li>
+                        <li class="menu-item"><a href="#">Live cameras</a></li>
+                        <li class="menu-item"><a href="#">Photos</a></li>
+                        <li class="menu-item"><a href="#">Contact</a></li>
+                    </ul>
+
+                    <i class="fa fa-bars" onclick="showMenu()"></i>
+                    <!-- .menu -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- end header   -->
+
+    <!-- start hero image -->
+    <div class="hero">
+        <div class="container">
+            <form class="hero-location">
+                <input type="text" placeholder="Find your location..." id="search">
+                <input type="button" value="Find" id="submit">
+            </form>
+        </div>
+    </div>
+    <!-- end hero image -->
+
+    <!-- start table forecast -->
+    <div class="forecast-table">
+        <div class="container">
+            <div class="forecast-container" id="forecast">
+
+                <div class="today forecast">
+                    <div class="forecast-header" id="today">
+                        <div class="day day1">Tuesday</div>
+                        <div class="date">4May</div>
+                    </div>
+
+                    <!-- ./forecast-header -->
+                    <div class="forecast-content" id="current">
+                        <div class="location">Cairo</div>
+                        <div class="degree">
+                            <div class="num maxtemp_c1">41<sup>o</sup>C</div>
+                            <div class="forecast-icon">
+                                <img src="" alt="icon"  class="icon_weather1">
+                            </div>
+                        </div>
+                        <div class="custom custom1">Sunny</div>
+                        <span><img src="images/icon-umberella.png" alt="icon">20%</span>
+                        <span><img src="images/icon-wind.png" alt="icon">18km/h</span>
+                        <span><img src="images/icon-compass.png" alt="icon">East</span>
+                    </div>
+                </div>
+
+
+                <div class="forecast">
+                    <div class="forecast-header">
+                        <div class="day day2">Wednesday</div>
+                    </div>
+                    <!-- ./forecast-header -->
+                    <div class="forecast-content">
+                        <div class="forecast-icon">
+                            <img src="images/116.png" alt="icon" class="icon_weather2">
+                        </div>
+                        <div class="degree maxtemp_c2">39.7<sup>o</sup>C</div>
+                        <small class="mintemp_c2">26.8<sup>o</sup></small>
+                        <div class="custom custom2"></div>
+                    </div>
+                </div>
+
+                <div class="forecast">
+                    <div class="forecast-header">
+                        <div class="day day3">Thursday</div>
+                    </div>
+                    <!-- ./forecast-header -->
+                    <div class="forecast-content">
+                        <div class="forecast-icon">
+                            <img src="images/116.png" alt="icon" class="icon_weather3">
+                        </div>
+                        <div class="degree maxtemp_c3">38.1<sup>o</sup>C</div>
+                        <small class="mintemp_c3">23.4<sup>o</sup></small>
+                        <div class="custom custom3"></div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- end forecast -->
+
+
+    <!-- start footer -->
+    <div class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <form action="#" class="subscribe-form">
+                        <input type="text" placeholder="Enter your email to subscribe...">
+                        <input type="submit" value="Subscribe">
+                    </form>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="social-links">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="colophon">&copy;Template Developed by Eslam Raafat &hearts;</p>
+        </div>
+    </div>
+    <!-- End footer -->
+
+
+
+    <script>
+        var navLinks = document.getElementById("menu-toggle");
+
+        function showMenu() {
+            navLinks.style.top = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.top = "-100%";
+        }
+    </script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
